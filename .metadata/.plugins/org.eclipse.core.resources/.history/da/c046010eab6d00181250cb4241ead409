@@ -1,0 +1,15 @@
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringLoop num = new StringLoop();
+		//num.printPhrase();
+		//num.printEvenNumber();
+		//num.printOddNumber();
+		//System.out.println("The number of o is " + num.countNumberOfO("Food"));
+		//num.printPattern("Hello World");
+		num.printString("Hello World");
+	}
+		
+}

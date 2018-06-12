@@ -1,0 +1,74 @@
+
+public class Box {
+	
+	private double length;
+	private double width;
+	private double height;
+	
+	public Box(double length, double width, double height) {
+		
+		this.length = length;
+		this.width = width;
+		this.height = height;
+	}
+	
+	//Constructor OVERLOADING
+	public Box(double sideLength) {
+		
+		this.length = sideLength;
+		this.width = sideLength;
+		this.height = sideLength;
+	}
+
+	public static void main(String[] args) {
+		
+		Box firstBox = new Box(10, 15, 20);
+		System.out.println(firstBox.getVolume());
+		System.out.println(getVolume(5, 5, 5)); // static method
+		Box cube = new Box(3);
+		
+
+	}
+	
+	//Getter
+	public double getLength() {
+		
+		return this.length;
+	}
+	
+	//Setter
+	public void setLength(double newLength) {
+		
+		this.length = newLength;
+	}
+	
+	public double getWidth() {
+		
+		return this.width;
+	}
+	
+	public double getHeight() {
+		
+		return this.height;
+	}
+	
+	public double getVolume() {
+		
+		double volume = this.length * this.width * this.height;
+		return volume;
+	}
+	
+	//static method
+	public static double addTwoNumbers(double num1, double num2) {
+		
+		double result = num1 + num2;
+		return result;
+	}
+	
+	public static double getVolume(double length, double width, double height) {
+		
+		double volume = length * width * height;
+		return volume;
+	}
+
+}

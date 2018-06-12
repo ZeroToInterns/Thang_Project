@@ -1,0 +1,12 @@
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringLoop num = new StringLoop();
+		num.printPhrase();
+//		num.printEvenNumber();
+//		num.printOddNumber();
+	}
+
+}

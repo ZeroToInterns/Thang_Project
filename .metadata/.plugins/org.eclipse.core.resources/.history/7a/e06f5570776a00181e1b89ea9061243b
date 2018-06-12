@@ -1,0 +1,12 @@
+
+public class IfStatement {
+
+	public static void main(String[] args) {
+		double temp = 77.5;
+		if (temp >= 77.5) {
+			System.out.println("It's Hot");
+		}
+
+	}
+
+}

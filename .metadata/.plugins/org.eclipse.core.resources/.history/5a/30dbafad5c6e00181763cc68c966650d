@@ -1,0 +1,9 @@
+
+public class Tester {
+	public static void main(String[] args) {
+		ControlFlowPractice testing = new ControlFlowPractice();
+		System.out.println(testing.calculateCost(51));
+		System.out.println(testing.calculateCost(35));
+		System.out.println(testing.calculateCost(6));
+	}
+}

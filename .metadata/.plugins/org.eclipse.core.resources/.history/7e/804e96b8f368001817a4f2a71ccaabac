@@ -1,0 +1,14 @@
+
+public class Person {
+	private static String name = "Thang";
+	private static int age = 19;
+	private static String hairColor = "black";
+	private static String eyeColor = "Brown";
+	private static double weight = 150.0;
+	private static char gender = 'M';
+	
+	public static void main(String[] args) {
+		System.out.println(name);
+	
+	}
+}
