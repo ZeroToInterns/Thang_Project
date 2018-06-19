@@ -4,13 +4,13 @@ public class LoopFun {
 	public static void main(String[] args) {
 		LoopFun f = new LoopFun();
 		
-		System.out.println(f.getPermutationCount(5));
-		System.out.println(f.removeDuplicates("seeped"));
+		//System.out.println(f.getPermutationCount(5));
+//		System.out.println(f.removeDuplicates(""));
 		System.out.println(f.sumSeries(4));
-		//System.out.println(f.product(5));
-		System.out.println(f.largestPowerLessThan(8));
-		System.out.println(f.sumOdd(16));
-		System.out.println(f.getECount("Feed"));
+//		System.out.println(f.product(5));
+//		System.out.println(f.largestPowerLessThan(8));
+//		System.out.println(f.sumOdd(16));
+//		System.out.println(f.getECount("Feed"));
 	}
 	// calculate the sum of the permutation
 	public int getPermutationCount(int n) {
@@ -21,8 +21,8 @@ public class LoopFun {
 		else {
 			product = 1;
 			//loop that calculate the sum by each value
-			for (int i = 0; i < n; i++) {
-				product *= i+1;
+			for (int i = 1; i <= n; i++) {
+				product *= i;
 			}
 		}
 		return product;
@@ -31,6 +31,9 @@ public class LoopFun {
 	
 	public String removeDuplicates(String word) {
 		String empty = ""; //create an empty string
+		if(word.equals(empty)) {
+			throw new NullPointerException();
+		}
 		for(int i = 0; i < word.length(); i++) {
 			String letter = word.substring(i, i+1); // create a letter 
 			if(!empty.contains(letter)) { //check to see if the empty string has the letter
@@ -101,6 +104,9 @@ public class LoopFun {
 	//get the number of e in a word
 	public int getECount(String word) {
 		int count = 0;
+		if (word.equals("")) {
+			throw new NullPointerException();
+		}
 		for (int i = 0; i < word.length(); i++) {
 			String letter = word.substring(i, i+1);
 			if(letter.equalsIgnoreCase("e")) {

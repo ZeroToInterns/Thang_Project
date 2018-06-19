@@ -12,19 +12,21 @@ public class SodaCan implements Comparable{
 	public SodaCan() {
 		this.radius = DEFAULT_RADIUS;
 		this.height = DEFAULT_HEIGHT;
+		//calculate the content(volume) of the can
 		this.content = (Math.PI * this.radius * this.radius * this.height) * FLUID_OUNCES_PER_CUBIC_INCHES	;
 	}
 	
 	//soda can constructor with radius and height as the parameter
 	public SodaCan(double radius, double height) {
 		if (radius < 0 || height < 0) {
-			this.radius = 1.2109;
-			this.height = 4.704;
+			this.radius = DEFAULT_RADIUS;
+			this.height = DEFAULT_HEIGHT;
 		}
 		else {
 			this.radius = radius;
 			this.height = height;
 		}
+		//calculate the content(volume) of the can
 		this.content = (Math.PI * this.radius * this.radius * this.height) * FLUID_OUNCES_PER_CUBIC_INCHES;
 		
 	}
@@ -41,6 +43,9 @@ public class SodaCan implements Comparable{
 	
 	//Subtract the amount of content from the fluidOunce when drank
 	public void drink(double fluidOunces) {
+		if (this.content < fluidOunces) {
+			System.out.println("You don't have enough soda to drink that much");
+		}
 		content -= fluidOunces;
 	}
 	

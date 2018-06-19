@@ -17,10 +17,10 @@ public class LoanApplicant {
 	
 	//check to see if the applicant is qualify for loan
 	public boolean qualifies() {
-		if(annualSalary > 100000) {
+		if(annualSalary > 100000) { //check to see if applicant makes more than 100,000
 			return true;
 		}
-		else if(annualSalary > 50000 && annualSalary <= 100000 && yearsOnJob >= 2) {
+		else if(annualSalary > 50000 && annualSalary <= 100000 && yearsOnJob >= 2) { //check to see if applicant make less than 100,000 , more than 50,000 but work more than 2 years
 			return true;
 		}
 		else if (annualSalary > 30000 && annualSalary <= 50000 && yearsOnJob >= 5) {
@@ -33,6 +33,9 @@ public class LoanApplicant {
 
 	//set a new year on job
 	public void setYearsOnJob(int years) {
+		if (years <= 0) {
+			this.yearsOnJob = 0;
+		}
 		this.yearsOnJob = years;
 	}
 	
@@ -43,6 +46,9 @@ public class LoanApplicant {
 	
 	//set a new annual salary for the applicant
 	public void setAnnualSalary(double salary) {
+		if (salary <= 0) {
+			this.annualSalary = 0;
+		}
 		this.annualSalary = salary;
 	}
 	

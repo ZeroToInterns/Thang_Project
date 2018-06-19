@@ -62,7 +62,7 @@ public class SubSandwich
     public double getCost()
     {
         double cost = 0;
-        //check for the size coresponding to the cost
+        //check for the size corresponding to the cost
         if (size == 6) {
             if (type == CHICKEN) {
                 cost += 5.50;

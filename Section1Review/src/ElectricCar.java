@@ -9,7 +9,7 @@ public class ElectricCar {
 	{
 		this.make = make;
 		this.maxRange = maxRange;
-		this.currentRange = 0;
+		this.currentRange = 0; //this car is uncharged when created
 	}
 	
 	//fully charge the car
@@ -21,6 +21,9 @@ public class ElectricCar {
 	//when the car drive, the current range is decreased
 	public void drive(int miles)
 	{
+		if (miles > this.currentRange) { //or (miles > this.getCurrentRange());
+			System.out.println("You don't have enough gas");
+		}
 		this.currentRange = this.currentRange - miles;
 	}
 	
