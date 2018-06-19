@@ -17,13 +17,13 @@ public class ArrayListPractice {
 		myColor.add("Brown");
 		myColor.add("Purple");
 		myColor.add("Gray");
-		insertFirst(myColor,"Maroon");
-		addSecondToLast(myColor, "Gold");
+		System.out.println(myColor);
+		insertFirst(myColor,"Maroon"); //add the new color to the first index 
+		addSecondToLast(myColor, "Gold"); // add the new color to the second to last index
 //		System.out.println("The amount of time the color appeared is " + countElement(myColor,"Orange"));
 		replaceOccurenceColor("Orange", "Peach", myColor);
 		System.out.println(myColor);
 		System.out.println("The amount of time the color appeared is " + countElement(myColor,"Peach"));
-		System.out.println(myColor.get(myColor.size()-1));
 		
 	}
 	
