@@ -3,27 +3,29 @@ public class ArrayListPractice {
 	
 	public static void main(String[] args) {
 		
-		ArrayList<String> myColor = new ArrayList<String>(); //create an array list that contains string of color
+		ArrayList<String> colorList = new ArrayList<String>(); //create an array list that contains string of color
 		//add 10 colors
-		myColor.add("Red");
-		myColor.add("Blue");
-		myColor.add("Green");
-		myColor.add("Yellow");
-		myColor.add("Orange");
-		myColor.add("Orange");
-		myColor.add("Orange");
-		myColor.add("Black");
-		myColor.add("White");
-		myColor.add("Brown");
-		myColor.add("Purple");
-		myColor.add("Gray");
-		System.out.println(myColor);
-		insertFirst(myColor,"Maroon"); //add the new color to the first index 
-		addSecondToLast(myColor, "Gold"); // add the new color to the second to last index
-//		System.out.println("The amount of time the color appeared is " + countElement(myColor,"Orange"));
-		replaceOccurenceColor("Orange", "Peach", myColor);
-		System.out.println(myColor);
-		System.out.println("The amount of time the color appeared is " + countElement(myColor,"Peach"));
+		colorList.add("Red");
+		colorList.add("Blue");
+		colorList.add("Green");
+		colorList.add("Yellow");
+		colorList.add("Orange");
+		colorList.add("Orange");
+		colorList.add("Orange");
+		colorList.add("Black");
+		colorList.add("White");
+		colorList.add("Brown");
+		colorList.add("Purple");
+		colorList.add("Gray");
+		
+		System.out.println(colorList);
+		
+		insertFirst(colorList,"Maroon"); //add the new color to the first index 
+		addSecondToLast(colorList, "Gold"); // add the new color to the second to last index
+		replaceOccurenceColor("Orange", "Peach", colorList);//replace the targeted color with the new color
+		
+		System.out.println(colorList);
+		System.out.println("The amount of time the color appeared is " + countElement(colorList,"Peach"));
 		
 	}
 	
